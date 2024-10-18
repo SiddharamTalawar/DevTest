@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+<!-- using django template inheritance -->
+
+<!-- bock to handle custom title of the page -->
+{% block title %} Upload the file {% endblock %}
+
+<!-- bock to handle custom content of the  page -->
+{% block content %}
+<div
+  class=""
+  style="
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+  "
+>
+  <div>
+    <img style="width: 100%; ; object-fit: contain " src=
+    https://www.medius.com/media/apqmlqy1/female-red-shirt-laptop-patterned-glass-reflection-v2.jpg?
+    alt="">
+  </div>
+  <div style="position: relative; top: -500px; left: -400px">
+    <h2 style="font-size: 55px; font-weight: bold">
+      Upload the Excel/CSV file
+    </h2>
+    <p style="font-size: 25px">
+      this is assignment for python django internship at Medius
+    </p>
+    <br /><br /><br />
+
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %} {{form.as_p}}
+      <div class="form-check" style="margin-left: -100px">
+        <input type="checkbox" name="send_mail" value="send_mail" />
+        <label for="send_mail">receive summary in Email</label>
+      </div>
+
+      <button
+        class="btn btn-primary"
+        style="
+          background-color: #da2128;
+          border-color: #da2128;
+          color: white;
+          font-size: 20px;
+          font-weight: bold;
+          border-radius: 30px;
+          padding: 10px 40px;
+          margin-left: -100px;
+        "
+        onmouseover="this.style.backgroundColor='#f44336'"
+        onmouseout="this.style.backgroundColor='#da2128'"
+        type="submit"
+      >
+        Upload
+      </button>
+    </form>
+  </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+<!-- using django template inheritance -->
+
+<!-- bock to handle custom title of the page -->
+{% block title %} Summary {% endblock %}
+
+<!-- bock to handle custom content of the  page -->
+{% block content %}
+<div class="container">
+  <h2 class="text-center"><u>Summary</u></h2>
+  <br />
+
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        {% for column in datatable.columns %}
+        <td>{{ column }}</td>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in datatable.data %}
+      <tr>
+        {% for cell in row %}
+        <td>{{ cell }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endblock content %}
+</div>

@@ -1,0 +1,38 @@
+<!-- Write HTML code here -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </head>
+  <body
+    style="
+      background-image: url(https://www.medius.com/media/ka0p544v/light-sand-background-8.jpg?);
+    "
+  >
+    <nav
+      class="navbar bg-body-tertiary"
+      style="background-color: #ffffff; padding: 0%"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://www.medius.com/media/1tbhge1n/medius_logo.svg"
+            alt="Medius Logo"
+            width="150"
+            height="120"
+          />
+        </a>
+      </div>
+    </nav>
+    {% block content %} {% endblock %}
+  </body>
+</html>
